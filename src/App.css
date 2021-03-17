@@ -1,16 +1,58 @@
-/* .A-Team {
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  overflow: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.A-Team {
   height: 100vh;
-} */
+}
 .content {
   width: 100%;
   height: 100%;
-  background: black;
+}
+
+.error-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.error-page h1 {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-right: 2px solid black;
+  font-size: 40px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .name {
   position: absolute;
   top: 3%;
-  left:3%;
+  left: 3%;
   font-size: 45px;
   font-family: monospace;
   color: white;
@@ -18,99 +60,34 @@
   padding: 0 10px;
 }
 
-.greeting-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  box-shadow: 0px 0px 65px #080808;
-  background: black;
-  border-radius: 5px;
-  color: white;
-  line-height: 1.5em;
-  width: 80%;
+h2,
+h1 {
+  margin: 20px 30px;
+}
+
+.middle-section {
+  width: 100%;
+  height: 50vh;
   text-align: center;
   font-family: monospace;
-  font-size: 2em;
-  transform: translate(-50%, -50%);
-}
-
-@media(max-width: 750px) {
-  .greeting-text {
-    font-size: 1em;
-  }
-}
-
-.book-width {
-  width: 80%;
-  margin: 0 auto;
+  margin-top: 80px;
+  font-size: 27px;
 }
 
 .hero-section {
-  position: relative;
   overflow: hidden;
-  height: 40%;
+  height: 40vh;
 }
 
 .hero-logo {
   width: 100%;
-  max-height: 100vh;
 }
-
-.who-we-are-section {
-  margin-top: -5px;
-  border-top: 1px solid;
-}
-
-.who-we-are-content {
-  display: flex;
-  flex-direction: column;
-  padding: 50px;
-  background-image: linear-gradient(45deg, #ebf6fb, transparent);
-  font-family: monospace;
-}
-
-.answer1,
-.answer2,
-.answer3 {
-  align-self: flex-end;
-  margin-top: 16px;
-  font-family: monospace;
-  font-size: 18px;
-  text-decoration: underline;
-  color: white;
-}
-
-.footer {
-  width: 100%;
-  margin-top: 50px;
-  background: black;
-  color: white;
-  padding: 60px 0;
-  text-align: center;
-  font-family: monospace;
-  font-size: 20px;
-}
-
-.contacts {
-  display: flex;
-  justify-content: space-around;
-}
-
-.co-founder {
-  margin-bottom: 15px;
-}
-
-
-
-
-
-
 
 /* Google Fonts */
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 
 /* Global */
-.line-1{
+.line-1 {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -120,20 +97,80 @@
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
-  transform: translateY(-50%);    
+  transform: translateY(-50%);
 }
 
 /* Animation */
-.anim-typewriter{
+.anim-typewriter {
   animation: typewriter 4s steps(45) 1s 1 normal both,
-  blinkTextCursor 500ms steps(45) infinite normal;
+    blinkTextCursor 500ms steps(45) infinite normal;
   animation-delay: 6s;
 }
-@keyframes typewriter{
-  from{width: 0;}
-  to{width: 24.6em;}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 24.6em;
+  }
 }
-@keyframes blinkTextCursor{
-  from{border-right-color: black;}
-  to{border-right-color: transparent;}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: black;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+/* media-queries */
+
+@media screen and (max-width: 769px) {
+  h1 {
+    font-size: 45px;
+  }
+}
+
+@media screen and (max-width: 501px) {
+  .line-1 {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .name {
+    font-size: 30px;
+  }
+
+  .line-1 {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .line-1 {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  h2 {
+    font-size: 20px;
+  }
 }

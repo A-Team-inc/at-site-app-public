@@ -1,25 +1,38 @@
 {
   "homepage": "https://ateam-inc.com/",
-  "name": "my-app",
-  "version": "0.1.0",
+  "name": "A-Team",
   "private": true,
+  "description": "A simplified bare-bones starter for Gatsby",
+  "version": "0.1.0",
+  "license": "0BSD",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "gh-pages": "^3.1.0",
+    "gatsby": "^3.0.1",
+    "gatsby-plugin-react-helmet": "^4.0.0",
+    "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
     "react-scripts": "4.0.1",
+    "scrollmagic": "^2.0.8",
     "web-vitals": "^0.2.4"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+  "devDependencies": {
+    "prettier": "2.2.1"
   },
   "eslintConfig": {
     "extends": [
