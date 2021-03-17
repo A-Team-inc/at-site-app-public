@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react"
-import { Helmet } from "react-helmet"
 import Loader from "../Loader/Loader"
 import Information from "../atomic/organisms/Information/Information"
 import Technology from "../atomic/organisms/Technology/Technology"
 import Contacts from "../atomic/organisms/Contacts/Contacts"
 import SEO from "../atomic/organisms/SEO/SEO"
 import reportWebVitals from "../reportWebVitals"
-import ScrollMagic from "scrollmagic"
 import { resizeWidthOnly } from "../utilities/index"
 
 import Title from "../atomic/atoms/Title/Title"
@@ -14,46 +12,52 @@ import Text from "../atomic/atoms/Text/Text"
 import HeroImage from "../assets/Hero.jpg"
 import "../App.css"
 
-export default function Home() {
-  const [loaderState, setLoaderState] = useState(true)
-  const [scrollMagic, setScrollMagic] = useState({
-    controller: new ScrollMagic.Controller({
-      globalSceneOptions: { triggerHook: "onLeave", duration: "200%" },
-    }),
-  })
+const ScrollMagic = typeof window !== `undefined` ? require("scrollmagic") : null
 
-  const { controller } = scrollMagic
+const initialState = typeof window !== 'undefined' ? {
+  controller: new ScrollMagic.Controller({
+    globalSceneOptions: { triggerHook: "onLeave", duration: "200%" }
+  })
+}: null;
+
+
+export default function Home() {
+  const [loaderState, setLoaderState] = useState(true);
+  const [scrollMagic, setScrollMagic] = useState(initialState);
 
   resizeWidthOnly(function () {
-    window.location.reload()
+    if (typeof window !== `undefined`) {
+      window.location.reload()
+    }
   })
 
   useEffect(() => {
-    window.onload = () => {
-      window.scrollTo(0, 0)
-    }
-    window.onload()
+    if (typeof window !== `undefined`) {
+      const { controller } = scrollMagic;
 
-    setTimeout(() => {
-      let bodyElement = document.querySelector("body")
-      bodyElement.style.overflow = "auto"
-      setLoaderState(false)
-    }, 5000)
+      window.onload = () => {
+        window.scrollTo(0, 0)
+      }
+      window.onload()
 
-    let viewportWidth = window.innerWidth
+      setTimeout(() => {
+        let bodyElement = document.querySelector("body")
+        bodyElement.style.overflow = "auto"
+        setLoaderState(false)
+      }, 5000)
 
-    console.log(viewportWidth)
+      let viewportWidth = window.innerWidth
 
-    if (viewportWidth >= 1025) {
-      const sections = document.querySelectorAll("section")
-      console.log(sections)
+      if (viewportWidth >= 1025) {
+        const sections = document.querySelectorAll("section")
 
-      for (let i = 0; i < sections.length; i++) {
-        new ScrollMagic.Scene({
-          triggerElement: sections[i],
-        })
-          .setPin(sections[i], { pushFollowers: false })
-          .addTo(controller)
+        for (let i = 0; i < sections.length; i++) {
+          new ScrollMagic.Scene({
+            triggerElement: sections[i],
+          })
+            .setPin(sections[i], { pushFollowers: false })
+            .addTo(controller)
+        }
       }
     }
   }, [])

@@ -1,10 +1,9 @@
 import React from "react"
 
 import "./loader.css"
-import "../../public/vivify.min.css"
+import "../../static/vivify.min.css"
 
 const Loader = () => {
-  // popOut delay-100  duration-4000
   return (
     <div className="pre-loader">
       <div className="first-part delay-1000 duration-1000 vivify fadeInLeft">
