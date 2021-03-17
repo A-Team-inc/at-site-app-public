@@ -1,0 +1,2 @@
+(self.webpackChunka_team_site_app=self.webpackChunka_team_site_app||[]).push([[883],{9616:function(e,a,t){"use strict";t.r(a);var n=t(7294);a.default=function(){return n.createElement("div",{className:"error-page"},n.createElement("h1",null,"404 not found"))}}}]);
+//# sourceMappingURL=component---src-pages-404-js-87c2db7a88392df95035.js.map
