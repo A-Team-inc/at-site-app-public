@@ -1,3 +1,4 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow: /
+Sitemap: https://ateam-inc.com/sitemap.xml
+Host: https://ateam-inc.com
