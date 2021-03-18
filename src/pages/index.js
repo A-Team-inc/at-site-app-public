@@ -77,11 +77,16 @@ export default function Home() {
           </div>
           <div className="middle-section">
             <Text textClassName="line-1 anim-typewriter">
-              We can everything you want and do it good
+              We turn your business ideas into reality
             </Text>
             <Title size="1">
-              We are a small but super talented company with the high level IT
-              specialists.
+              Are you looking for super talented software development specialists?
+            </Title>
+            <Title size="2">
+              Our experts will help your business to grow
+            </Title>
+            <Title size="2">
+              Let's do it together!
             </Title>
           </div>
         </section>
