@@ -12,18 +12,21 @@ import Text from "../atomic/atoms/Text/Text"
 import HeroImage from "../assets/Hero.jpg"
 import "../App.css"
 
-const ScrollMagic = typeof window !== `undefined` ? require("scrollmagic") : null
+const ScrollMagic =
+  typeof window !== `undefined` ? require("scrollmagic") : null
 
-const initialState = typeof window !== 'undefined' ? {
-  controller: new ScrollMagic.Controller({
-    globalSceneOptions: { triggerHook: "onLeave", duration: "200%" }
-  })
-}: null;
-
+const initialState =
+  typeof window !== "undefined"
+    ? {
+        controller: new ScrollMagic.Controller({
+          globalSceneOptions: { triggerHook: "onLeave", duration: "200%" },
+        }),
+      }
+    : null
 
 export default function Home() {
-  const [loaderState, setLoaderState] = useState(true);
-  const [scrollMagic, setScrollMagic] = useState(initialState);
+  const [loaderState, setLoaderState] = useState(true)
+  const [scrollMagic, setScrollMagic] = useState(initialState)
 
   resizeWidthOnly(function () {
     if (typeof window !== `undefined`) {
@@ -33,7 +36,7 @@ export default function Home() {
 
   useEffect(() => {
     if (typeof window !== `undefined`) {
-      const { controller } = scrollMagic;
+      const { controller } = scrollMagic
 
       window.onload = () => {
         window.scrollTo(0, 0)
