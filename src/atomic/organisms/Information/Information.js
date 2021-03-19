@@ -34,7 +34,7 @@ const Information = () => {
             PM, PO, FE and BE devs, QA.
           </Text>
           <Text textClassName="information-text">
-            We are professionals in our field. Improve your business with us
+            We are professionals in our field. Improve your business with us!
           </Text>
         </div>
       </div>

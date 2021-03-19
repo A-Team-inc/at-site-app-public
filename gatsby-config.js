@@ -8,12 +8,13 @@ module.exports = {
   /* Your site config here */
 
   siteMetadata: {
-    title: "Websites creation from scratch",
-    titleTemplate: "A-Team",
-    description: "We can everything you want and do it good",
-    url: "https://ateam-inc.com", // No trailing slash allowed!
-    image: "/images/seoImg.jpg", // Path to your image you placed in the 'static' folder
-    twitterUsername: " ",
+    title: "A-Team - Software development agency",
+    titleTemplate: "A-Team - Software development agency",
+    description: "We are A-Team, software development company with great experience! We are proposing our expertise to help your business grow. Our expertise is full-cycle software development.",
+    meta: '',
+    url: "https://ateam-inc.com",
+    image: "/images/seoImg.jpg",
+    twitterUsername: "",
     siteUrl: 'https://ateam-inc.com'
   },
 
