@@ -3,7 +3,6 @@
   min-height: 100vh;
   background-color: black;
   color: white;
-  padding: 20px;
   font-family: monospace;
 }
 
@@ -15,6 +14,16 @@
 .contacts_content {
   text-align: center;
   padding: 50px 20px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+}
+
+.phone-wrapper,
+.email-wrapper,
+.messengers-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .contacts_info-title {
@@ -39,7 +48,19 @@
 
 /* media-queries */
 
+@media screen and (max-width: 1026px) {
+  .contacts_content {
+    grid-template-columns: 1fr;
+    grid-column-gap: 0px;
+  }
+}
+
 @media screen and (max-width: 769px) {
+  .contacts_content {
+    grid-template-columns: 1fr;
+    grid-column-gap: 0px;
+  }
+
   .contacts_title {
     font-size: 30px;
   }

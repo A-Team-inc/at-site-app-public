@@ -9,7 +9,9 @@ import { resizeWidthOnly } from "../utilities/index"
 
 import Title from "../atomic/atoms/Title/Title"
 import Text from "../atomic/atoms/Text/Text"
+import ImageAtom from "../atomic/atoms/ImgeAtom/ImageAtom"
 import HeroImage from "../assets/Hero.jpg"
+import BottomArrow from "../assets/icons/arrow.png"
 import "../App.css"
 
 const ScrollMagic =
@@ -70,7 +72,7 @@ export default function Home() {
       <SEO />
       {loaderState && <Loader />}
       <div className="content">
-        <section style={{ height: "100vh" }}>
+        <section className="welcome-section">
           <div className="hero-section">
             <div className="name">A-Team</div>
             <img src={HeroImage} className="hero-logo" alt="logo" />
@@ -80,14 +82,18 @@ export default function Home() {
               We turn your business ideas into reality
             </Text>
             <Title size="1">
-              Are you looking for super talented software development specialists?
+              Are you looking for super talented software development
+              specialists?
             </Title>
-            <Title size="2">
+            <Title className="home-subtitle" size="2">
               Our experts will help your business to grow
             </Title>
-            <Title size="2">
+            <Title className="home-subtitle" size="2">
               Let's do it together!
             </Title>
+            <a className="animation-arrow" href="#next-section">
+              <ImageAtom imgClassName="bottom_arrow" Url={BottomArrow} />
+            </a>
           </div>
         </section>
 

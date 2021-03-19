@@ -18,25 +18,31 @@ const Contacts = () => {
         Contacts
       </Title>
       <div className="contacts_content">
-        <Text textClassName="contacts_info-title">Phone:</Text>
-        <Anchor Url="tel:+380636527771" ClassName="contacts_info">
-          +38(063)652-77-71
-        </Anchor>
-        <Anchor Url="tel:+380963248636" ClassName="contacts_info">
-          +38(096)324-86-36
-        </Anchor>
-        <Text textClassName="contacts_info-title">E-mail:</Text>
-        <Anchor Url="mailto:test@tect.com" ClassName="contacts_info">
-          consulting@ateam-inc.com
-        </Anchor>
-        <Text textClassName="contacts_info-title">Messengers:</Text>
-        <div>
-          <Anchor Url="#">
-            <ImageAtom imgClassName="contacts-icon" Url={Viber} />
+        <div className="phone-wrapper">
+          <Text textClassName="contacts_info-title">Phone:</Text>
+          <Anchor Url="tel:+380636527771" ClassName="contacts_info">
+            +38(063)652-77-71
           </Anchor>
-          <Anchor Url="#">
-            <ImageAtom imgClassName="contacts-icon" Url={Whatsapp} />
+          <Anchor Url="tel:+380963248636" ClassName="contacts_info">
+            +38(096)324-86-36
           </Anchor>
+        </div>
+        <div className="email-wrapper">
+          <Text textClassName="contacts_info-title">E-mail:</Text>
+          <Anchor Url="mailto:test@tect.com" ClassName="contacts_info">
+            consulting@ateam-inc.com
+          </Anchor>
+        </div>
+        <div className="messengers-wrapper">
+          <Text textClassName="contacts_info-title">Messengers:</Text>
+          <div>
+            <Anchor Url="#">
+              <ImageAtom imgClassName="contacts-icon" Url={Viber} />
+            </Anchor>
+            <Anchor Url="#">
+              <ImageAtom imgClassName="contacts-icon" Url={Whatsapp} />
+            </Anchor>
+          </div>
         </div>
       </div>
     </section>

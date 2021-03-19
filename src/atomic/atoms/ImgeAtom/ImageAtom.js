@@ -1,6 +1,8 @@
 import React from "react"
 
 const ImageAtom = ({ imgClassName = " ", Url, imgWidth = " " }) => {
+  console.log(Url)
+  
   return (
     <img
       className={imgClassName}
