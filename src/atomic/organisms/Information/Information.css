@@ -58,6 +58,10 @@
     height: 43vh;
   }
 
+  .information-img {
+    border-top: none;
+  }
+
   .information-text {
     font-size: 20px;
   }
