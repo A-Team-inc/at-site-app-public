@@ -33,7 +33,7 @@ const Contacts = () => {
             consulting@ateam-inc.com
           </Anchor>
         </div>
-        <div className="messengers-wrapper">
+        {/* <div className="messengers-wrapper">
           <Text textClassName="contacts_info-title">Messengers:</Text>
           <div>
             <Anchor Url="#">
@@ -43,8 +43,9 @@ const Contacts = () => {
               <ImageAtom imgClassName="contacts-icon" Url={Whatsapp} />
             </Anchor>
           </div>
-        </div>
+        </div> */}
       </div>
+      <Text textClassName="copyright">Copyright © 2021 A-Team inc.</Text>
     </section>
   )
 }

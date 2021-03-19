@@ -3,7 +3,7 @@ import React from "react"
 import Title from "../../atoms/Title/Title"
 import Text from "../../atoms/Text/Text"
 import ImageAtom from "../../atoms/ImgeAtom/ImageAtom"
-import imgIt from "../../../assets/it-technology.jpg"
+import imgIt from "../../../assets/it-technology.webp"
 import "./Information.css"
 
 const Information = () => {

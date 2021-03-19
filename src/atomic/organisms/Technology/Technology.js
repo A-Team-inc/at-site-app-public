@@ -61,12 +61,12 @@ const Technology = () => {
     },
     {
       url: Html,
-      subtitle: "Html",
+      subtitle: "HTML",
       width: 100,
     },
     {
       url: Css,
-      subtitle: "Css",
+      subtitle: "CSS",
       width: 100,
     },
     {
