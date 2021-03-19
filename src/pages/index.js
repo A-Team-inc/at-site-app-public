@@ -9,6 +9,7 @@ import { resizeWidthOnly } from "../utilities/index"
 
 import Title from "../atomic/atoms/Title/Title"
 import Text from "../atomic/atoms/Text/Text"
+import Anchor from "../atomic/atoms/Anchor/Anchor"
 import ImageAtom from "../atomic/atoms/ImgeAtom/ImageAtom"
 import HeroImage from "../assets/Hero.jpg"
 import BottomArrow from "../assets/icons/arrow.png"
@@ -91,9 +92,9 @@ export default function Home() {
             <Title className="home-subtitle" size="2">
               Let's do it together!
             </Title>
-            <a className="animation-arrow" href="#next-section">
+            <Anchor className="animation-arrow" Url="#next-section">
               <ImageAtom imgClassName="bottom_arrow" Url={BottomArrow} />
-            </a>
+            </Anchor>
           </div>
         </section>
 

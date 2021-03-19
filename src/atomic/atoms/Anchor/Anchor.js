@@ -1,8 +1,8 @@
 import React from "react"
 
-const Anchor = ({ ClassName = " ", Url, children }) => {
+const Anchor = ({ className = " ", Url, Name, children }) => {
   return (
-    <a className={ClassName} href={Url}>
+    <a className={className} name={Name} href={Url}>
       {children}
     </a>
   )

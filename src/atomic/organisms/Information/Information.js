@@ -2,6 +2,7 @@ import React from "react"
 
 import Title from "../../atoms/Title/Title"
 import Text from "../../atoms/Text/Text"
+import Anchor from "../../atoms/Anchor/Anchor"
 import ImageAtom from "../../atoms/ImgeAtom/ImageAtom"
 import imgIt from "../../../assets/it-technology.webp"
 import "./Information.css"
@@ -9,7 +10,7 @@ import "./Information.css"
 const Information = () => {
   return (
     <section className="information">
-      <a className="anchor" name="next-section"></a>
+      <Anchor className="anchor" Name="next-section"></Anchor>
       <Title className="information-title" size="2">
         Our Services
       </Title>

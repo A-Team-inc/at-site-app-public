@@ -20,16 +20,16 @@ const Contacts = () => {
       <div className="contacts_content">
         <div className="phone-wrapper">
           <Text textClassName="contacts_info-title">Phone:</Text>
-          <Anchor Url="tel:+380636527771" ClassName="contacts_info">
+          <Anchor Url="tel:+380636527771" className="contacts_info">
             +38(063)652-77-71
           </Anchor>
-          <Anchor Url="tel:+380963248636" ClassName="contacts_info">
+          <Anchor Url="tel:+380963248636" className="contacts_info">
             +38(096)324-86-36
           </Anchor>
         </div>
         <div className="email-wrapper">
           <Text textClassName="contacts_info-title">E-mail:</Text>
-          <Anchor Url="mailto:test@tect.com" ClassName="contacts_info">
+          <Anchor Url="mailto:test@tect.com" className="contacts_info">
             consulting@ateam-inc.com
           </Anchor>
         </div>
