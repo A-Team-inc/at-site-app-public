@@ -76,7 +76,12 @@ export default function Home() {
         <section className="welcome-section">
           <div className="hero-section">
             <div className="name">A-Team</div>
-            <img src={HeroImage} className="hero-logo" alt="logo" />
+            <img
+              loading="lazy"
+              src={HeroImage}
+              className="hero-logo"
+              alt="logo"
+            />
           </div>
           <div className="middle-section">
             <Text textClassName="line-1 anim-typewriter">
