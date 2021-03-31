@@ -11,11 +11,10 @@ export default function ContactForm() {
     e.preventDefault();
 
     emailjs.sendForm('service_mngw4ul', 'template_pcyegpe', e.target, 'user_3PmAOUTZFfmWAV0Ppb9cj')
-      .then((result) => {
+      .then(() => {
         setAPIMessage('Your request have been sent!')
       }, (error) => {
         setAPIMessage(error.text)
-        console.log(error.text);
       });
   }
 
