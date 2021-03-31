@@ -3,13 +3,9 @@ import React from "react"
 import Title from "../../atoms/Title/Title"
 import Text from "../../atoms/Text/Text"
 import Anchor from "../../atoms/Anchor/Anchor"
-import ImageAtom from "../../atoms/ImgeAtom/ImageAtom"
 import "./Contacts.css"
-import {
-  Telegram,
-  Viber,
-  Whatsapp,
-} from "../../../assets/icons/messengers/index"
+
+import ContactForm from "./ContactForm";
 
 const Contacts = () => {
   return (
@@ -17,6 +13,7 @@ const Contacts = () => {
       <Title className="contacts_title" size="2">
         Contacts
       </Title>
+      <ContactForm />
       <div className="contacts_content">
         <div className="phone-wrapper">
           <Text textClassName="contacts_info-title">Phone:</Text>
@@ -33,17 +30,6 @@ const Contacts = () => {
             consulting@ateam-inc.com
           </Anchor>
         </div>
-        {/* <div className="messengers-wrapper">
-          <Text textClassName="contacts_info-title">Messengers:</Text>
-          <div>
-            <Anchor Url="#">
-              <ImageAtom imgClassName="contacts-icon" Url={Viber} />
-            </Anchor>
-            <Anchor Url="#">
-              <ImageAtom imgClassName="contacts-icon" Url={Whatsapp} />
-            </Anchor>
-          </div>
-        </div> */}
       </div>
       <Text textClassName="copyright">Copyright © 2021 A-Team inc.</Text>
     </section>
