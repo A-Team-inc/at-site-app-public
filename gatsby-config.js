@@ -4,6 +4,10 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   /* Your site config here */
 
@@ -21,6 +25,20 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: 'GTM-M59MMF4',
+        includeInDevelopment: false,
+        defaultDataLayer: { platform: "gatsby" }
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: process.env.GA_TRACKING_ID,
+      },
+    },
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
