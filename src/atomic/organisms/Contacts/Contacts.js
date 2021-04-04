@@ -3,9 +3,11 @@ import React from "react"
 import Title from "../../atoms/Title/Title"
 import Text from "../../atoms/Text/Text"
 import Anchor from "../../atoms/Anchor/Anchor"
+import ImageAtom from "../../atoms/ImgeAtom/ImageAtom"
 import "./Contacts.css"
 
 import ContactForm from "./ContactForm";
+import { LinkedIn } from "../../../assets/icons/messengers";
 
 const Contacts = () => {
   return (
@@ -15,13 +17,10 @@ const Contacts = () => {
       </Title>
       <ContactForm />
       <div className="contacts_content">
-        <div className="phone-wrapper">
-          <Text textClassName="contacts_info-title">Phone:</Text>
-          <Anchor Url="tel:+380636527771" className="contacts_info">
-            +38(063)652-77-71
-          </Anchor>
-          <Anchor Url="tel:+380963248636" className="contacts_info">
-            +38(096)324-86-36
+        <div className="follow-wrapper">
+          <Text textClassName="contacts_info-title">Follow us:</Text>
+          <Anchor Url="https://www.linkedin.com/company/a-team-software-company" className="contacts-icon" target="_blank">
+            <ImageAtom Url={LinkedIn} />
           </Anchor>
         </div>
         <div className="email-wrapper">

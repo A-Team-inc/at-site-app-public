@@ -20,11 +20,19 @@
   grid-column-gap: 10px;
 }
 
-.phone-wrapper,
+.follow-wrapper,
 .email-wrapper,
 .messengers-wrapper {
   display: flex;
   flex-direction: column;
+}
+
+.follow-wrapper {
+  align-items: center;
+}
+
+.follow-wrapper img {
+  width: 100%;
 }
 
 .contacts_info-title {
@@ -44,7 +52,6 @@
 
 .contacts-icon {
   width: 70px;
-  margin: 0 10px;
 }
 
 .copyright {
