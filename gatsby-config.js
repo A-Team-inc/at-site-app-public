@@ -34,6 +34,19 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          process.env.GA_TRACKING_ID, // Google Analytics / GA
+        ],
+        gtagConfig: {
+          optimize_id: "G-YJ3VW1LXW1",
+          anonymize_ip: true,
+          cookie_expires: 0,
+        },
+      }
+    },
+    {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: process.env.GA_TRACKING_ID,
