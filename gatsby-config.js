@@ -7,6 +7,9 @@
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
+// console.log('267881685');
+// process.env.GA_TRACKING_ID="267881685"
+// console.log('proceprocess.env.GA_TRACKING_IDss', process.env.GA_TRACKING_ID);
 
 module.exports = {
   /* Your site config here */

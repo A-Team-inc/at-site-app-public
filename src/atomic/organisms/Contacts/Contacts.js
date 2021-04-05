@@ -7,7 +7,7 @@ import ImageAtom from "../../atoms/ImgeAtom/ImageAtom"
 import "./Contacts.css"
 
 import ContactForm from "./ContactForm";
-import { LinkedIn } from "../../../assets/icons/messengers";
+import { LinkedIn, Facebook, Instagram } from "../../../assets/icons/messengers";
 
 const Contacts = () => {
   return (
@@ -19,13 +19,21 @@ const Contacts = () => {
       <div className="contacts_content">
         <div className="follow-wrapper">
           <Text textClassName="contacts_info-title">Follow us:</Text>
-          <Anchor Url="https://www.linkedin.com/company/a-team-software-company" className="contacts-icon" target="_blank">
-            <ImageAtom Url={LinkedIn} />
-          </Anchor>
+          <div className="contacts_info_items">
+            <Anchor Url="https://www.linkedin.com/company/a-team-software-company" className="contacts-icon" target="_blank">
+              <ImageAtom Url={LinkedIn} />
+            </Anchor>
+            <Anchor Url="https://www.facebook.com/ATeamSoftwareEngineeringCompany" className="contacts-icon" target="_blank">
+              <ImageAtom Url={Facebook} />
+            </Anchor>
+            <Anchor Url="https://www.instagram.com/ateam_softwarecompany" className="contacts-icon" target="_blank">
+              <ImageAtom Url={Instagram} />
+            </Anchor>
+          </div>
         </div>
         <div className="email-wrapper">
           <Text textClassName="contacts_info-title">E-mail:</Text>
-          <Anchor Url="mailto:test@tect.com" className="contacts_info">
+          <Anchor Url="mailto:consulting@ateam-inc.com" className="contacts_info">
             consulting@ateam-inc.com
           </Anchor>
         </div>
